@@ -1,0 +1,324 @@
+.
+├── README.md
+├── actual.txt
+├── all-files.txt
+├── apply_code.sh
+├── clean-ure.sh
+├── dirs.txt
+├── eslint.config.js
+├── expected-268.txt
+├── expected.txt
+├── fill_all_code.sh
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── fix-duplicates.sh
+├── fix-firebase.sh
+├── fix-vite.sh
+├── index.html
+├── my121shop-rn
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── firebase.json
+│   ├── firestore.indexes.json
+│   ├── firestore.rules
+│   ├── functions
+│   │   ├── helpers
+│   │   │   ├── abandonedCart.js
+│   │   │   ├── admin.js
+│   │   │   ├── affiliate.js
+│   │   │   ├── analytics.js
+│   │   │   ├── cod.js
+│   │   │   ├── csvImport.js
+│   │   │   ├── inventorySync.js
+│   │   │   ├── invoices.js
+│   │   │   ├── notifications.js
+│   │   │   ├── payouts.js
+│   │   │   ├── paypal.js
+│   │   │   ├── qr.js
+│   │   │   ├── razorpay.js
+│   │   │   ├── recommendations.js
+│   │   │   ├── returns.js
+│   │   │   ├── reviews.js
+│   │   │   ├── searchSync.js
+│   │   │   ├── shipping.js
+│   │   │   ├── vendor.js
+│   │   │   └── wallet.js
+│   │   ├── index.js
+│   │   ├── package.json
+│   │   └── schedulers
+│   │       ├── abandonedCartReminder.js
+│   │       ├── affiliateReportScheduler.js
+│   │       ├── backupScheduler.js
+│   │       ├── flashSaleScheduler.js
+│   │       ├── index.js
+│   │       ├── inventorySyncScheduler.js
+│   │       ├── loyaltyPointsScheduler.js
+│   │       ├── package.json
+│   │       ├── payoutScheduler.js
+│   │       └── referralBonusScheduler.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── favicon.svg
+│   │   ├── logo.svg
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── service-worker.js
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   ├── logo.svg
+│   │   │   └── placeholder.png
+│   │   ├── components
+│   │   │   ├── AddToCartButton.jsx
+│   │   │   ├── AdminOrderRow.jsx
+│   │   │   ├── AdminProductForm.jsx
+│   │   │   ├── AdminSidebar.jsx
+│   │   │   ├── CSVUploader.jsx
+│   │   │   ├── CartItem.jsx
+│   │   │   ├── ChatBox.jsx
+│   │   │   ├── CheckoutButton.jsx
+│   │   │   ├── ConfirmDialog.jsx
+│   │   │   ├── CouponInput.jsx
+│   │   │   ├── FlashSaleBadge.jsx
+│   │   │   ├── FlashSaleBanner.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── ImageUploader.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── LotteryBanner.jsx
+│   │   │   ├── LoyaltyWidget.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── NotificationToast.jsx
+│   │   │   ├── OrderStatusStepper.jsx
+│   │   │   ├── OrderSummary.jsx
+│   │   │   ├── Pagination.jsx
+│   │   │   ├── PaymentMethodSelector.jsx
+│   │   │   ├── PaymentSummary.jsx
+│   │   │   ├── PriceTag.jsx
+│   │   │   ├── ProductCard.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   ├── QRConfirm.jsx
+│   │   │   ├── QRScanner.jsx
+│   │   │   ├── QuantitySelector.jsx
+│   │   │   ├── RatingStars.jsx
+│   │   │   ├── ReferralWidget.jsx
+│   │   │   ├── RiderMap.jsx
+│   │   │   ├── RiderOrderCard.jsx
+│   │   │   ├── SavedInstruments.jsx
+│   │   │   ├── SearchBar.jsx
+│   │   │   ├── SearchInput.jsx
+│   │   │   ├── ShareButtons.jsx
+│   │   │   ├── StockAlertButton.jsx
+│   │   │   ├── VariantSelector.jsx
+│   │   │   ├── VendorProfileCard.jsx
+│   │   │   ├── VendorSidebar.jsx
+│   │   │   └── WishlistCard.jsx
+│   │   ├── constants.js
+│   │   ├── contexts
+│   │   │   ├── AdminContext.jsx
+│   │   │   ├── AffiliateContext.jsx
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── CartContext.jsx
+│   │   │   ├── LoyaltyContext.jsx
+│   │   │   └── ReferralContext.jsx
+│   │   ├── firebase.js
+│   │   ├── hooks
+│   │   │   ├── useAuth.js
+│   │   │   ├── useCart.js
+│   │   │   ├── useDebounce.js
+│   │   │   ├── useDeliverySlots.js
+│   │   │   ├── useFirestoreQuery.js
+│   │   │   ├── useFlashSaleTimer.js
+│   │   │   ├── useLoyalty.js
+│   │   │   ├── useNotifications.js
+│   │   │   ├── usePWA.js
+│   │   │   ├── usePaymentMethods.js
+│   │   │   ├── useReferral.js
+│   │   │   └── useVariants.js
+│   │   ├── index.css
+│   │   ├── layouts
+│   │   │   ├── AdminLayout.jsx
+│   │   │   └── MainLayout.jsx
+│   │   ├── locales
+│   │   │   ├── bn.json
+│   │   │   ├── en.json
+│   │   │   ├── gu.json
+│   │   │   ├── hi.json
+│   │   │   └── ta.json
+│   │   ├── main.jsx
+│   │   ├── middlewares
+│   │   │   ├── adminGuard.js
+│   │   │   ├── authGuard.js
+│   │   │   ├── authMiddleware.js
+│   │   │   ├── errorHandler.js
+│   │   │   ├── logger.js
+│   │   │   ├── riderGuard.js
+│   │   │   ├── validationMiddleware.js
+│   │   │   └── vendorGuard.js
+│   │   ├── pages
+│   │   │   ├── Admin
+│   │   │   │   ├── Analytics.jsx
+│   │   │   │   ├── BulkUpload.jsx
+│   │   │   │   ├── Cancellations.jsx
+│   │   │   │   ├── Coupons.jsx
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   ├── FlashSales.jsx
+│   │   │   │   ├── Orders.jsx
+│   │   │   │   ├── Payouts.jsx
+│   │   │   │   ├── PreOrders.jsx
+│   │   │   │   ├── ProductEdit.jsx
+│   │   │   │   ├── Products.jsx
+│   │   │   │   ├── Reports.jsx
+│   │   │   │   ├── Returns.jsx
+│   │   │   │   ├── Riders.jsx
+│   │   │   │   ├── Settings.jsx
+│   │   │   │   ├── StockAlerts.jsx
+│   │   │   │   ├── Users.jsx
+│   │   │   │   └── Vendors.jsx
+│   │   │   ├── Auth
+│   │   │   │   ├── ForgotPassword.jsx
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── NotFound.jsx
+│   │   │   │   ├── OTPLogin.jsx
+│   │   │   │   ├── Register.jsx
+│   │   │   │   └── Signup.jsx
+│   │   │   ├── Reseller
+│   │   │   │   ├── AffiliateDashboard.jsx
+│   │   │   │   └── ResellerDashboard.jsx
+│   │   │   ├── Rider
+│   │   │   │   ├── RiderMap.jsx
+│   │   │   │   ├── RiderOrderDetails.jsx
+│   │   │   │   ├── RiderOrders.jsx
+│   │   │   │   └── RiderPanel.jsx
+│   │   │   ├── User
+│   │   │   │   ├── Cart.jsx
+│   │   │   │   ├── Checkout.jsx
+│   │   │   │   ├── Home.jsx
+│   │   │   │   ├── OrderDetails.jsx
+│   │   │   │   ├── Orders.jsx
+│   │   │   │   ├── ProductDetails.jsx
+│   │   │   │   ├── Profile.jsx
+│   │   │   │   ├── ResellerDashboard.jsx
+│   │   │   │   ├── Shop.jsx
+│   │   │   │   ├── Wishlist.jsx
+│   │   │   │   └── WishlistShare.jsx
+│   │   │   └── Vendor
+│   │   │       ├── VendorOrders.jsx
+│   │   │       ├── VendorPanel.jsx
+│   │   │       ├── VendorPayouts.jsx
+│   │   │       ├── VendorProducts.jsx
+│   │   │       └── VendorStorefront.jsx
+│   │   ├── router.jsx
+│   │   ├── services
+│   │   │   ├── affiliate.js
+│   │   │   ├── analytics.js
+│   │   │   ├── auth.js
+│   │   │   ├── cart.js
+│   │   │   ├── chat.js
+│   │   │   ├── commissions.js
+│   │   │   ├── coupons.js
+│   │   │   ├── dropshipping.js
+│   │   │   ├── flashSales.js
+│   │   │   ├── geo.js
+│   │   │   ├── inventorySync.js
+│   │   │   ├── loyalty.js
+│   │   │   ├── notifications.js
+│   │   │   ├── orders.js
+│   │   │   ├── payments.js
+│   │   │   ├── payouts.js
+│   │   │   ├── preorders.js
+│   │   │   ├── products.js
+│   │   │   ├── recommendations.js
+│   │   │   ├── referral.js
+│   │   │   ├── reports.js
+│   │   │   ├── returns.js
+│   │   │   ├── reviews.js
+│   │   │   ├── riders.js
+│   │   │   ├── search.js
+│   │   │   ├── shipping.js
+│   │   │   ├── stockAlerts.js
+│   │   │   ├── storage.js
+│   │   │   ├── users.js
+│   │   │   ├── vendors.js
+│   │   │   └── wallet.js
+│   │   ├── styles
+│   │   │   ├── globals.css
+│   │   │   └── tailwind.css
+│   │   ├── sw-registration.js
+│   │   ├── tests
+│   │   │   ├── components
+│   │   │   │   ├── App.test.jsx
+│   │   │   │   ├── Cart.test.jsx
+│   │   │   │   ├── Navbar.test.jsx
+│   │   │   │   └── ProductCard.test.jsx
+│   │   │   ├── e2e
+│   │   │   │   ├── adminDashboard.test.js
+│   │   │   │   └── fullPurchase.test.js
+│   │   │   ├── hooks
+│   │   │   │   ├── useAuth.test.js
+│   │   │   │   └── useCart.test.js
+│   │   │   ├── integration
+│   │   │   │   ├── checkoutFlow.test.js
+│   │   │   │   └── loginFlow.test.js
+│   │   │   ├── services
+│   │   │   │   ├── auth.test.js
+│   │   │   │   ├── orders.test.js
+│   │   │   │   └── payments.test.js
+│   │   │   ├── unit
+│   │   │   │   ├── cartContext.test.js
+│   │   │   │   ├── filters.test.js
+│   │   │   │   └── utils.test.js
+│   │   │   └── utils
+│   │   │       ├── currency.test.js
+│   │   │       └── validators.test.js
+│   │   ├── themes
+│   │   │   ├── ThemeProvider.jsx
+│   │   │   ├── ThemeToggle.jsx
+│   │   │   ├── dark-theme.css
+│   │   │   ├── light-theme.css
+│   │   │   ├── tailwind.theme.js
+│   │   │   └── theme.js
+│   │   ├── utils
+│   │   │   ├── aiRecommendations.js
+│   │   │   ├── barcode.js
+│   │   │   ├── constants.js
+│   │   │   ├── currency.js
+│   │   │   ├── dates.js
+│   │   │   ├── filters.js
+│   │   │   ├── firebaseCollections.js
+│   │   │   ├── formatDate.js
+│   │   │   ├── formatPrice.js
+│   │   │   ├── geo.js
+│   │   │   ├── helpers.js
+│   │   │   ├── lotteryHelpers.js
+│   │   │   ├── orderStatus.js
+│   │   │   ├── paypal.js
+│   │   │   ├── pwa.js
+│   │   │   ├── qr.js
+│   │   │   ├── razorpay.js
+│   │   │   ├── stockAlerts.js
+│   │   │   └── validators.js
+│   │   └── utils.js
+│   ├── start.sh
+│   ├── storage.rules
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   └── workbox-config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── service-worker.js
+├── setup-structure.sh
+├── start.sh
+├── storage.rules
+├── tailwind.config.js
+├── tree.txt
+├── ure.sh
+├── vite.config.js
+└── workbox-config.js
+
+33 directories, 289 files
