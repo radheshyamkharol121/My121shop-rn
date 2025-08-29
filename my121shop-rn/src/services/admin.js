@@ -24,3 +24,28 @@ const BulkUpload = () => {
 };
 
 export default BulkUpload;
+
+/**
+ * CSV से products upload करता है
+ * @param {File} file
+ */
+export const uploadProductsCSV = async (file) => {
+  const text = await file.text();
+  const lines = text.split("\n");
+  const headers = lines[0].split(",");
+  
+  for (let i = 1; i < lines.length; i++) {
+    const values = lines[i].split(",");
+    const product = {};
+    headers.forEach((h, idx) => product[h.trim()] = values[idx].trim());
+    await addProduct(product); // addProduct function पहले से होना चाहिए
+  }
+};
+
+/**
+ * Product Firestore में add करता है
+ */
+export const addProduct = async (product) => {
+  const productsRef = collection(firestore, "products");
+  await addDoc(productsRef, product);
+};
