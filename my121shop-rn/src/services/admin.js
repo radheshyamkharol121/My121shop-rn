@@ -49,3 +49,18 @@ export const addProduct = async (product) => {
   const productsRef = collection(firestore, "products");
   await addDoc(productsRef, product);
 };
+
+/**
+ * Stock कम होने वाले products fetch करता है
+ */
+export const fetchLowStockProducts = async () => {
+  const productsSnap = await getDocs(collection(firestore, "products"));
+  const lowStock = [];
+  productsSnap.forEach(doc => {
+    const data = doc.data();
+    if (data.stock <= 5) { // Threshold 5
+      lowStock.push({ id: doc.id, ...data });
+    }
+  });
+  return lowStock;
+};
