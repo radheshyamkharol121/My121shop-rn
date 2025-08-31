@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "my121shop-56021",
+    "# Production alias use करें": "my121shop-56021"
+  },
+  "targets": {},
+  "etags": {}
+}
