@@ -81,8 +81,8 @@ const ProductCard = ({ product }) => {
           </div>
 
           <button
-            onClick={handleAddToCart
-disabled={!product.inStock}
+            onClick={handleAddToCart}
+            disabled={!product.inStock}
             className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
           >
             {product.inStock ? 'Add to Cart' : 'Out of Stock'}
